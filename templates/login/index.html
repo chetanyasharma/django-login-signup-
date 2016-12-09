@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% load staticfiles %} <!-- New line -->
+
+<html>
+
+    <head>
+        <title>login_signup</title>
+    </head>
+
+    <body>
+        <h1>login_signup says...</h1>
+        {% if user.is_authenticated %}
+<h1>login says... hello {{ user.username }}!</h1>
+{% else %}
+<h1>login says... hello world!</h1>
+{% endif %}
+        <!-- hello world! <strong>{{ boldmessage }}</strong><br /> -->
+        <!-- <li><a href="/login/category/{{ category.slug }}">{{ category.name }}</a></li> -->
+        <!-- <a href="/login/add_category/">Add a New Category</a><br /> -->
+        
+        <a href="/logout/">logout</a>
+
+
+    </body>
+
+</html>
